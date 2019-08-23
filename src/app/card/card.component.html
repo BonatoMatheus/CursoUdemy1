@@ -1,0 +1,73 @@
+<section>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Person Data</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+
+        </mat-card-content>
+        <mat-card-actions>
+
+            <!--<form>
+                First name:<br>
+                <input type="text" name="firstname" (input)="inputName = $event.target.value" [value]="inputName"><br>
+            </form>-->
+
+            <div class="example-button-row">
+                <button mat-button [color]="color">{{incluir}}</button>
+            </div>
+            <div class="example-button-row">
+                <button mat-button [color]="colors[i]" [disabled]="BtnDisabled">{{compartilhar}}</button>
+            </div>
+            <div class="example-button-row">
+                <button mat-button [color]="colors[i]" (click)="save()">Save</button>
+            </div>
+            <div>
+                <mat-checkbox [color]="colors[i]" (change)="cbChange($event)">Disable/Enable</mat-checkbox>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+</section>
+
+<section>
+
+    <!--<form>
+        First name:<br>
+        <input type="text" name="firstname" [(ngModel)]="client.firstName"><br>
+        Last name:<br>
+        <input type="text" name="lastname" [(ngModel)]="client.lastName"><br>
+        Address<br>
+        <input type="text" name="address" [(ngModel)]="client.address"><br>
+        Age:<br>
+        <input type="text" name="age" [(ngModel)]="client.age"><br>
+    </form>-->
+
+    <mat-card-actions>
+        <div>
+            <p> Teste: {{teste}}</p>
+            <p> TESTEGRANDE: {{TESTEGRANDE}}</p>
+            <p> Age: {{age}}</p>
+            <!--<p> {{client.firstName}}</p>
+            <p> {{client.lastName }}</p>
+            <p> {{client.address}}</p>
+            <p> {{client.age}}</p>-->
+        </div>
+    </mat-card-actions>
+</section>
+
+<section>
+    <div>
+        <select name="cars" [disabled]="selectDisabled" (selectonChange)="selectonChange($event)">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+    </div>
+
+
+</section>
+
+<section>
+    <app-data-table [clientes]="clients"></app-data-table>
+</section>
