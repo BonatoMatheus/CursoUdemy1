@@ -1,7 +1,7 @@
 <section>
     <mat-card>
         <mat-card-header>
-            <mat-card-title>Person Data</mat-card-title>
+            <mat-card-title>{{ title }}</mat-card-title>
         </mat-card-header>
         <mat-card-content>
 
@@ -12,6 +12,7 @@
                 First name:<br>
                 <input type="text" name="firstname" (input)="inputName = $event.target.value" [value]="inputName"><br>
             </form>-->
+            <app-clients></app-clients>
 
             <div class="example-button-row">
                 <button mat-button [color]="color">{{incluir}}</button>
@@ -30,18 +31,6 @@
 </section>
 
 <section>
-
-    <!--<form>
-        First name:<br>
-        <input type="text" name="firstname" [(ngModel)]="client.firstName"><br>
-        Last name:<br>
-        <input type="text" name="lastname" [(ngModel)]="client.lastName"><br>
-        Address<br>
-        <input type="text" name="address" [(ngModel)]="client.address"><br>
-        Age:<br>
-        <input type="text" name="age" [(ngModel)]="client.age"><br>
-    </form>-->
-
     <mat-card-actions>
         <div>
             <p> Teste: {{teste}}</p>
@@ -58,7 +47,7 @@
 <section>
     <div>
         <select name="cars" [disabled]="selectDisabled" (selectonChange)="selectonChange($event)">
-            <option value="volvo">Volvo</option>
+            <option value="volvo">{{ value }}</option>
             <option value="saab">Saab</option>
             <option value="fiat">Fiat</option>
             <option value="audi">Audi</option>
@@ -67,7 +56,7 @@
 
 
 </section>
-
 <section>
-    <app-data-table [clientes]="clients"></app-data-table>
+    <!--(plusTwo)="incBy(2)" (minusOne)="incBy(-1)" (minusTwo)="incBy(-2)"-->
+    <app-data-table (inc)="incBy($event)" [title]="title" [clientes]="clients"></app-data-table>
 </section>

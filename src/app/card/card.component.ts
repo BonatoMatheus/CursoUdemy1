@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Client } from './client.model';
+import { Client } from '../clients/client.model';
 
 @Component({
   selector: 'app-card',
@@ -16,6 +16,7 @@ export class CardComponent implements OnInit {
   public selectDisabled: boolean = false;
   public inputName = "Ney";
   public name1: string = "";
+  public title: string = "Teste output";
 
 
 
@@ -24,8 +25,9 @@ export class CardComponent implements OnInit {
   @Input() public teste: string;
   @Input() public TESTEGRANDE: string;
   @Input() public age: number;
-
   public clients: Client[];
+
+  public value: number = 0;
 
   /*client = {
      firstName: "matheus",
@@ -36,13 +38,7 @@ export class CardComponent implements OnInit {
 
 
   constructor() {
-      this.clients = [
-      { id: 1, name: "Lionel", lastName: "Messi", age: 30 },
-      { id: 2, name: "Cristiano", lastName: "Ronaldo", age: 40 },
-      { id: 3, name: "Neymar", lastName: "Jr", age: 75 },
-      { id: 4, name: "Zinedini", lastName: "Zidane", age: 20 }
-    ];
-
+      
   }
 
   ngOnInit() {
@@ -66,6 +62,12 @@ export class CardComponent implements OnInit {
   }
   inputEvent(event) {
     console.log(event.target.value);
+  }
+
+  //Outputs
+  incBy(event){
+    console.log(event);
+    this.value += event;
   }
 }
 

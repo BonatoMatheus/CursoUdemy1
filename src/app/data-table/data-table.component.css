@@ -2,3 +2,9 @@ table {
     width: 100%;
 
   }
+
+.horizontal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

@@ -16,6 +16,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { DataTableComponent } from './data-table/data-table.component';
 import {MatTableModule} from '@angular/material/table';
 import {FormsModule} from '@angular/forms'
+import {MatIconModule} from '@angular/material/icon';
+import { ClientsComponent } from './clients/clients.component';
 
 
 
@@ -23,7 +25,7 @@ import {FormsModule} from '@angular/forms'
 
 @NgModule({
   declarations: [
-    AppComponent, CalculadoraComponent, CardComponent, DataTableComponent
+    AppComponent, CalculadoraComponent, CardComponent, DataTableComponent, ClientsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import {FormsModule} from '@angular/forms'
     MatSelectModule,
     MatFormFieldModule,
     MatTableModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
    ],
 
   providers: [

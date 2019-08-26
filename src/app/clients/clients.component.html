@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-content>
+        <section>
+            <form class=form-field>
+                First name:<br>
+                <input type="text" name="firstname" [(ngModel)]="client.firstName"><br>
+                Last name:<br>
+                <input type="text" name="lastname" [(ngModel)]="client.lastName"><br>
+                Address<br>
+                <input type="text" name="address" [(ngModel)]="client.address"><br>
+                Age:<br>
+                <input type="number" name="age" [(ngModel)]="client.age"><br>
+            </form>
+            <button mat-mini-fab color="primary">
+                <mat-icon>check</mat-icon>
+            </button>
+
+        </section>
+    </mat-card-content>
+</mat-card>>
+
+<p *ngFor="let c of clients"> {{ c.name }} / {{ c.lastName }} / {{ c.age }}</p>

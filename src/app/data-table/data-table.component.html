@@ -1,3 +1,10 @@
+<div class="horizontal-buttons">
+    <button mat-raised-button color ="primary" (click)="btnClick(1)"> <mat-icon>exposure_plus_1</mat-icon></button>
+    <button mat-raised-button color="primary" (click)="btnClick(2)"> <mat-icon>exposure_plus_2</mat-icon></button>
+    <button mat-raised-button color="accent" (click)="btnClick(-1)"> <mat-icon>exposure_neg_1</mat-icon></button>
+    <button mat-raised-button color="accent" (click)="btnClick(-2)"> <mat-icon>exposure_neg_2</mat-icon></button>
+</div>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
