@@ -25,7 +25,7 @@ export class CardComponent implements OnInit {
   @Input() public teste: string;
   @Input() public TESTEGRANDE: string;
   @Input() public age: number;
-  public clients: Client[];
+  //public clients: Client[];
 
   public value: number = 0;
 

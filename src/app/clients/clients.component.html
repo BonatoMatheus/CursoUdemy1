@@ -3,20 +3,28 @@
         <section>
             <form class=form-field>
                 First name:<br>
-                <input type="text" name="firstname" [(ngModel)]="client.firstName"><br>
+                <input type="text" name="firstname" [(ngModel)]="firstName"><br>
                 Last name:<br>
-                <input type="text" name="lastname" [(ngModel)]="client.lastName"><br>
+                <input type="text" name="lastname" [(ngModel)]="lastName"><br>
                 Address<br>
-                <input type="text" name="address" [(ngModel)]="client.address"><br>
+                <input type="text" name="address" [(ngModel)]="address"><br>
                 Age:<br>
-                <input type="number" name="age" [(ngModel)]="client.age"><br>
+                <input type="number" name="age" [(ngModel)]="age"><br>
             </form>
-            <button mat-mini-fab color="primary">
-                <mat-icon>check</mat-icon>
-            </button>
-
+            <br />
+            <div>
+                <button mat-mini-fab color="primary" (click)="save()">
+                    <mat-icon>check</mat-icon>
+                </button>
+            </div>
+            <br />
+            <div *ngFor="let c of clients">
+               <p> {{ c.firstName }}</p>
+               <p> {{ c.lastName }}</p>
+               <p> {{ c.address }}</p>
+               <p> {{ c.age }}</p>
+            </div>
         </section>
     </mat-card-content>
-</mat-card>>
+</mat-card>
 
-<p *ngFor="let c of clients"> {{ c.name }} / {{ c.lastName }} / {{ c.age }}</p>

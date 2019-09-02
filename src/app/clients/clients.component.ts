@@ -9,8 +9,9 @@ import { Client } from './client.model';
 export class ClientsComponent implements OnInit {
 
   //public id: number;
-  public name: string;
+  public firstName: string;
   public lastName: string;
+  public address: string;
   public age: number;
 
   public clients: Client[] = [];
@@ -32,11 +33,12 @@ export class ClientsComponent implements OnInit {
 
   save(){
     this.clients.push(
-    { name: this.name, lastName: this.lastName, age: this.age}
+    { firstName: this.firstName, lastName: this.lastName, address: this.address, age: this.age}
     
     );
-      this.name = "";
+      this.firstName = "";
       this.lastName = "";
+      this.address = "";
       this.age = 0;
 
   }
