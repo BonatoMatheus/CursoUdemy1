@@ -13,11 +13,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { DataTableComponent } from './data-table/data-table.component';
+import { DataTableComponent } from './clients/tabelaClientes/data-table.component';
 import {MatTableModule} from '@angular/material/table';
 import {FormsModule} from '@angular/forms'
 import {MatIconModule} from '@angular/material/icon';
 import { ClientsComponent } from './clients/clients.component';
+import { BasicComponent } from './Observables/basic/basic.component';
 
 
 
@@ -25,7 +26,12 @@ import { ClientsComponent } from './clients/clients.component';
 
 @NgModule({
   declarations: [
-    AppComponent, CalculadoraComponent, CardComponent, DataTableComponent, ClientsComponent
+    AppComponent, 
+    CalculadoraComponent, 
+    CardComponent, 
+    DataTableComponent, 
+    ClientsComponent, 
+    BasicComponent
   ],
   imports: [
     BrowserModule,

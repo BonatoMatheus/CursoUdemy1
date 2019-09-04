@@ -7,10 +7,13 @@
 
         </mat-card-content>
         <mat-card-actions>
-            <!-- Formulario de clients-->
+            <!-- Formulario de clients e tabela-->
             <app-clients></app-clients>
         </mat-card-actions>
     </mat-card>
+    
+    
+    
     <!--<form>
                 First name:<br>
                 <input type="text" name="firstname" (input)="inputName = $event.target.value" [value]="inputName"><br>
@@ -58,8 +61,8 @@
     </div>
 
 
-</section>-->
+</section>
     <section>
-        <!--(plusTwo)="incBy(2)" (minusOne)="incBy(-1)" (minusTwo)="incBy(-2)"-->
+        (plusTwo)="incBy(2)" (minusOne)="incBy(-1)" (minusTwo)="incBy(-2)"
         <app-data-table (inc)="incBy($event)" [title]="title" [clientes]="clients"></app-data-table>
-    </section>
+    </section>-->
